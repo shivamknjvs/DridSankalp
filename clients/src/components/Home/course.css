@@ -1,0 +1,33 @@
+
+
+
+.course-wrapper{
+    padding: 3rem  ;
+    color: white;
+    
+    background-color: rgb(35,34,52);
+}
+
+
+.course-title{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .course-title>h1{
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3.2rem;
+  }
+  .course-title>p{
+    width: 60%;
+    text-align: center;
+    margin-top:-1rem;
+    
+    font-size: 1.2rem;
+  }
+
+  

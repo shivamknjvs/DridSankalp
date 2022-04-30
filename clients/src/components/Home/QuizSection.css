@@ -1,0 +1,26 @@
+
+
+.quiz-container{
+  padding: 3rem;
+}
+.quiz-section{
+  background-color: rgb(31,27,44);
+  display: flex;
+  color: white;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quiz-section>h1{
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 3.2rem;
+}
+.quiz-section>p{
+  width: 60%;
+  text-align: center;
+  margin-top:-1rem;
+  font-size: 1.2rem;
+}

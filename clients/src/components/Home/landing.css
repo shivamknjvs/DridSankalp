@@ -1,0 +1,54 @@
+
+
+ 
+ .carousel-wrapper{
+     height: 82vh;
+overflow: hidden;
+ 
+ }
+  
+.carousel-body >div
+ {
+     margin-bottom: 7rem;
+     
+} 
+.carousel-body>div>h1{
+    color: white;
+    font-size: 3rem;
+}
+.carousel-body>div>p{
+    color: lightgrey;
+    width: 100%;
+}
+.carousel-body>div>button{
+    font-weight: 600;
+     margin: 1rem 0;
+}
+  .first-cont{
+      width: 100vw;
+      height: 85vh;
+      background: url('https://media.istockphoto.com/photos/rustic-style-for-a-home-office-design-is-a-very-cosy-idea-picture-id1301076698?b=1&k=20&m=1301076698&s=170667a&w=0&h=WpT5w0z7QegZ7ezz3G1gx9v2pSvcObMhPrlRmBRI1DY='),rgb(73, 72, 103);
+      background-position: center;
+      background-blend-mode: overlay;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .second-cont{
+        width: 100vw;
+        height: 85vh;
+        background: url('https://media.istockphoto.com/photos/home-office-concept-with-computer-and-blank-picture-frame-picture-id1288842453?b=1&k=20&m=1288842453&s=170667a&w=0&h=ZIqfpKtIeCb20pH8FGnrgcbr7-ZGvPTggy6cC8zfhgU='),rgb(73, 72, 103);
+        background-position: center;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .third-cont{
+        width: 100vw;
+        height: 85vh;
+        background: url('https://images.unsplash.com/photo-1599249301068-393f39f24a5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGVkdWNhdGlvbiUyMG5vdGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),rgb(73, 72, 103);
+        background-position: center;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
