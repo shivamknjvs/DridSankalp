@@ -11,6 +11,7 @@ import Signupform from './Signupform';
 import UploadNotes from './UploadNotes';
 import Coursesoverview from './Courseoverview.jsx'
 import CoursePage from './components/Courses/CoursePage.jsx';
+import Quizpaper from './components/Quizpaper';
  function App() {
   return ( 
     <>  
@@ -22,7 +23,7 @@ import CoursePage from './components/Courses/CoursePage.jsx';
            <Route path='login' element={ <Loginform/> }/> 
            <Route path='signup' element={<Signupform/>}/>  
            <Route path='/notes' element={<CoursePage/>}/>
-              
+           <Route path='quiz/:quizid' element={<Quizpaper/>}/>
            <Route path='/notes/notesId' element={<Coursesoverview/> }/>
            <Route path='uploadNotes' element={<UploadNotes/>}/> 
          </Routes> 

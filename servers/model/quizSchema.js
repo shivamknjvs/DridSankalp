@@ -3,10 +3,11 @@ const mongoose =require('mongoose')
 // const bcrypt = require('bcryptjs')
 // const jwt = require('jsonwebtoken')
 const quizquestion= new mongoose.Schema({
-      a:String,
-      b:String,
-      c:String,
-      d:String,
+      Question:String,
+      A:String,
+      B:String,
+      C:String,
+      D:String,
       ans:String,
       explaination:String
 })
@@ -23,20 +24,10 @@ const quizSchema= new mongoose.Schema({
         type:String,
         required:true
     },
-    whatyoulearn:{
-        type:Array,
-        required:true,
-        default:[String]
-    },
     Quizcontent:{
         type:[quizquestion],
         required:true, 
-    },
-    aboutnotes:{
-         about:String,
-         link:String,
-         required:true
-    }
+    } 
 })
 
 // userSchema.pre('save',async function(next){
@@ -60,6 +51,6 @@ const quizSchema= new mongoose.Schema({
 
 // }
 
-const Quiz = mongoose.model('NOTESDATA',quizSchema);
+const Quiz = mongoose.model('QUIZDATA',quizSchema);
 
 module.exports= Quiz;

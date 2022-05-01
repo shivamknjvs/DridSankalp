@@ -3,7 +3,7 @@
 import QuizCard from '../QuizCard'
  const QuizPage = () => {
 
-
+  const quizdb = [1,2,3,4,5,6,7]
 
    return (
      <div className='quiz-page'>
@@ -15,13 +15,17 @@ import QuizCard from '../QuizCard'
            <button className="btn   filter-button">Hindi</button>
          </div>
          <div className="quiz-container row  m-0">
-           <QuizCard/>
-           <QuizCard/>
-           <QuizCard/>
-           <QuizCard/>
-           <QuizCard/>
-           <QuizCard/>
-           <QuizCard/>
+           {
+             quizdb.map( (quiz) =>{
+               return (
+                 <QuizCard 
+                 
+                  quizindex={quiz}
+                 /> 
+               )
+             } )
+           }
+           
          </div>
      </div>
    )

@@ -22,11 +22,10 @@ const articleScheme= new mongoose.Schema({
         required:true
     },
     whatyoulearn:{
-        type:Array,
-        required:true,
-        default:[String]
+        type:[String],
+        required:true 
     },
-    Quizcontent:{
+    Articlecontent:{
         type:[articletopic],
         required:true, 
     },
@@ -59,6 +58,6 @@ const articleScheme= new mongoose.Schema({
 
 // }
 
-const Article = mongoose.model('ArticleDATA',articleScheme);
+const Article = mongoose.model('ARTICLEDATA',articleScheme);
 
 module.exports= Article;

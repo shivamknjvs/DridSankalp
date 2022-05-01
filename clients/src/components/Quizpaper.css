@@ -1,0 +1,58 @@
+
+.Quizpaper{
+    background-color: rgb(60, 59, 85);
+    color: white;
+    padding: 1rem 0;
+}
+.Quizpaper>h2{
+    text-align: center;
+    padding: 1rem 0;
+}
+.Quizpaper>p{
+    text-align: center;
+    padding:  1rem 0;
+}
+
+.question-wrapper{
+   margin:1rem 3rem;
+   background-color: rgb(31,27,44);
+   padding: 1rem;
+   border-radius: 10px;
+}
+
+.question>*{
+    padding:0 1rem;
+    color: white;
+   
+}
+
+.answer-option{
+    padding: 0.2rem 1rem;
+    margin: 0.5rem 4.5rem;
+    width: calc( 100% - 9rem );
+    color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: row;
+    
+}
+.answer-num{
+    padding-right: 1rem;
+    color: black;
+}
+.question-wrapper>button{
+    margin:1rem 0 0 4.5rem ;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: white;
+    color: blue;
+}
+
+.explaination{
+    margin: 2rem 4.5rem;
+    display: none;
+}
+.explaination-num{
+    padding-right: 1rem;
+}

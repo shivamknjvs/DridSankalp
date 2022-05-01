@@ -25,14 +25,12 @@ const NotesSchema= new mongoose.Schema({
         required:true
     },
     whatyoulearn:{
-        type:Array,
-        required:true,
-        default:[]
+        type:[String],
+        required:true 
     },
     coursecontent:{
-        type:Array,
-        required:true,
-        default:[]
+        type:[String],
+        required:true 
     },
     noteslink:{ 
         type:String,

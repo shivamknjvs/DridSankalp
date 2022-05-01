@@ -9,6 +9,7 @@ app.use(express.json())
 app.use(require('./router/auth'))
 app.use(require('./router/login'))
 app.use(require('./router/notes'))
+app.use(require('./router/quiz'))
 
 const DB =process.env.MONGO_LINK
 mongoose.connect(DB).then( ()=>{

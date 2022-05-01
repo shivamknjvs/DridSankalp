@@ -9,12 +9,14 @@ router.get("/getnotes",async (req,res)=>{
     
     try{ 
         const notesdata =await Notes.find({})
-        res.send(notesdata);
+        res.status(201).json({
+          notesdata
+        })
     }
     catch(err){
         res.send(err)
     }
- 
+  
 })
 router.post("/postnotes", async (req, res) => {
   const {
