@@ -6,9 +6,11 @@ import Courses from './components/Home/CoursesSection';
 import { BrowserRouter as Router,Routes  ,Switch,Route  } from 'react-router-dom';
 import Home from './components/Home/HomeSection';
 import QuizPage from './components/Quiz/QuizPage';
-import Login from './Login';
-import Signup from './Signup';
+import Loginform from './Loginform';
+import Signupform from './Signupform';
 import UploadNotes from './UploadNotes';
+import Coursesoverview from './Courseoverview.jsx'
+import CoursePage from './components/Courses/CoursePage.jsx';
  function App() {
   return ( 
     <>  
@@ -17,10 +19,13 @@ import UploadNotes from './UploadNotes';
          <Routes>
            <Route exact path='/' element={<Home/>}/> 
            <Route path='/quiz' element={<QuizPage/>}/> 
-           <Route path='/login' element={<Login/>}/> 
-           <Route path='/signup' element={<Signup/>}/> 
-           <Route path='/uploadNotes' element={<UploadNotes/>}/> 
-         </Routes>
+           <Route path='login' element={ <Loginform/> }/> 
+           <Route path='signup' element={<Signupform/>}/>  
+           <Route path='/notes' element={<CoursePage/>}/>
+              
+           <Route path='/notes/notesId' element={<Coursesoverview/> }/>
+           <Route path='uploadNotes' element={<UploadNotes/>}/> 
+         </Routes> 
        </Router> 
     </>
   );

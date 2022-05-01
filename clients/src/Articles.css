@@ -1,0 +1,22 @@
+.articles-main-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-main-wrap{
+    width: 70%;
+}
+
+.articles-heading>h2{
+    font-weight: 500;
+}
+
+.articles-para{
+    padding: 1% 0;
+}
+
+.articles-para>p{
+    font-size: 1.1rem;
+}

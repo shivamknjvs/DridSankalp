@@ -11,10 +11,10 @@ const Navbar = () => {
 
       <nav className="navbar navbar-expand-lg m-0 p-0 navbar-wrapper nav-wrap  ">
         <div className="container-fluid p-0 m-0">
-          <a className="navbar-brand nav-logo d-flex" href="#">
+          <Link className="navbar-brand nav-logo d-flex" to='/'>
               <img src={logoImg} alt="" />
               <p>Drad Sankalp</p>
-          </a>
+          </Link>
           <button className="navbar-toggler burgur-icon-wrapper" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span   className="navbar-toggler-icon burgur-icon  " />
           </button>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <Link className="nav-link active" to='/quiz'>   Article</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Notes</a>
+                <Link className="nav-link active" aria-current="page" to='/notes'>Notes</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" to='/quiz'>   Quiz</Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
              </form>
             <li className="nav-item">
-                <button className="nav-link btn pe-3 ps-3 active btn login-li ">Login</button>
+                <Link to='/login' className="nav-link btn pe-3 ps-3 active btn login-li ">Login</Link>
               </li>
             </ul>
           </div>

@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken')
 
 
 router.post('/login', async (req, res) => {
-
+    let token;
     try {
         var { email, password } = req.body;
         if (!email || !password) {
@@ -23,8 +23,12 @@ router.post('/login', async (req, res) => {
         if (userLogin) {
 
             const isMatch =await bcrypt.compare(password, userLogin.password);
-            const token =await userLogin.generateAuthToken();
-            
+            token =await userLogin.generateAuthToken();
+               res.cookie("jwtoken", token,{
+                   expires:new Date(Date.now()+2592000000)
+                   ,httpOnly:true
+               })
+             
             if (isMatch) {
                 res.status(201).json({ message: "Login succefully" })
             }

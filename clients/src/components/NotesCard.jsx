@@ -1,5 +1,6 @@
 import React from 'react'
 import './NotesCard.css'
+import {Link} from 'react-router-dom'
 function NotesCard() {
   return (
      
@@ -12,9 +13,9 @@ function NotesCard() {
           Some quick example text to build on the card title and make
           up the bulk of the card's content.
         </p>
-        <a href="#" class="btn btn-primary">
+        <Link to='/notes/notesId' class="btn btn-primary">
           Enroll Now
-        </a>
+        </Link>
       </div>
      
   </div>
