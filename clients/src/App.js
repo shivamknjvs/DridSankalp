@@ -12,6 +12,7 @@ import UploadNotes from './UploadNotes';
 import Coursesoverview from './Courseoverview.jsx'
 import CoursePage from './components/Courses/CoursePage.jsx';
 import Quizpaper from './components/Quizpaper';
+import User from './User';
  function App() {
   return ( 
     <>  
@@ -26,6 +27,7 @@ import Quizpaper from './components/Quizpaper';
            <Route path='quiz/:quizid' element={<Quizpaper/>}/>
            <Route path='/notes/notesId' element={<Coursesoverview/> }/>
            <Route path='uploadNotes' element={<UploadNotes/>}/> 
+           <Route path='/user' element={<User/>}/>
          </Routes> 
        </Router> 
     </>

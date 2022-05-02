@@ -1,0 +1,56 @@
+
+.User{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-wrapper{
+    width: 60vw;
+    height: 70vh;
+    background-color:firebrick;
+}
+.user-detail{
+    width: 40%;
+    height: 100%;
+    background-color: blue;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.user-detail>*{
+    width: 100%;
+    
+}
+.user-img-container{
+    height: 50%;
+    width: 70%;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+
+}
+.user-performance{
+    width: 60%;
+}
+.toggle-cont{
+    width: 100%;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.toggle-cont>p{
+   width: 50%;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 2.5rem;
+   font-size: 1.2rem;
+   background-color: white;
+   border: 1px solid black;
+}
