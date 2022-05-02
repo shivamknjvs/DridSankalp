@@ -1,7 +1,7 @@
 
 const express = require('express');
 const User = require('../model/userSchema');
-
+const authenticate = require('../middleware/authenticate')
 const router = express.Router();
 
 
@@ -42,5 +42,11 @@ router.post('/register', async (req, res) => {
     }
 
 })
+
+
+
+
+//about 
+
 
 module.exports = router;

@@ -13,8 +13,7 @@ function QuizSection() {
              <QuizCard/>
              <QuizCard/>
              <QuizCard/>
-              
-               </div>
+        </div>
     </div>
   )
 }

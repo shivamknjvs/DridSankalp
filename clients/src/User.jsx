@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./User.css"
+ import { useNavigate } from 'react-router-dom'
 const User = () => {
+  
   return (
-    <div className='User'>
+    <div method="GET" className='User'>
         <div className="user-wrapper d-flex">
            <div className="user-col user-detail">
-               <div className="user-img-container">
-
+               <div className="user-img-container"> 
                </div>
                <h3>Shivam Chaudhary</h3>
                <p>Favourate Subject : Math</p>

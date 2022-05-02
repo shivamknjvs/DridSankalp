@@ -1,15 +1,50 @@
-import React from 'react'
+import React ,{useEffect,useState}from 'react'
 
 import logoImg from '../Assets/DridSankalpLogo.jpeg'
 import './navbar.css'
 import {HiSearch} from 'react-icons/hi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const Navbar = () => {
+   
+  const [userlogin, setUserlogin] = useState(true)
+   const navigate = useNavigate()
+
+  const callUserPage =async ()=>{
+
+      
+    try{
+const res = await fetch("/about",{
+ method:"GET",
+ headers:{
+   Accept:"application/json",
+   "Content-Type":"application/json" 
+
+ },
+ credentials:"include"
+})
+const data = await res.json();
+console.log(data)
+if(!res.status === 200){
+  setUserlogin(true)
+ const error = new Error(res.error)
+ throw error;
+}
+    }
+    catch(err){
+      navigate('/login')
+    console.log(err);
+  }
+}
+useEffect(()=>{
+  callUserPage();
+}
+,[])
+
   return (
     <>
     
 
-      <nav className="navbar navbar-expand-lg m-0 p-0 navbar-wrapper nav-wrap  ">
+      <nav method="GET" className="navbar navbar-expand-lg m-0 p-0 navbar-wrapper nav-wrap  ">
         <div className="container-fluid p-0 m-0">
           <Link className="navbar-brand nav-logo d-flex" to='/'>
               <img src={logoImg} alt="" />
@@ -37,9 +72,17 @@ const Navbar = () => {
               <HiSearch className='search-icon' />
               </div>
              </form>
-            <li className="nav-item">
-                <Link to='/login' className="nav-link btn pe-3 ps-3 active btn login-li ">Login</Link>
-              </li>
+
+             {
+               userlogin === true ?
+              <Link to='/user' ><i class="fas fa-user"></i></Link> 
+               :
+               <li className="nav-item">
+               <Link to='/login' className="nav-link btn pe-3 ps-3 active btn login-li ">Login</Link>
+               </li>
+             }
+             
+              
             </ul>
           </div>
         </div>
