@@ -15,7 +15,7 @@
 
 .question-wrapper{
    margin:1rem 3rem;
-   background-color: rgb(31,27,44);
+  
    padding: 1rem;
    border-radius: 10px;
 }
@@ -39,7 +39,7 @@
     padding-right: 1rem;
     color: black;
 }
-.question-wrapper>button{
+.question-wrapper>div>button{
     margin:1rem 0 0 4.5rem ;
     border: none;
     padding: 0.2rem 0.5rem;
@@ -55,4 +55,9 @@
 }
 .explaination-num{
     padding-right: 1rem;
+}
+.question-wrapper>div{
+    margin: 1rem 0;
+    background-color: rgb(31,27,44);
+    padding: 1rem;
 }

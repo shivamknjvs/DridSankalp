@@ -1,16 +1,24 @@
 
-.img-container{
-    width: 100%;
-    height: 12rem;
-}
+
 .note-card{
     width: calc( 100% / 3  - 4rem );
     margin: 2rem;
-    padding: 1rem;
     background-color: rgb(31,27,44);
     border: none;
+    padding: 1rem;
     box-shadow: 0 4px 8px 0 rgba(101, 101, 101, 0.2), 0 6px 20px 0 rgba(87, 87, 87, 0.19);
-   transition: transform 0.3s;
+    transition: transform 0.3s;
+}
+ 
+.img-container{
+    width: 100%;
+    height: 12rem;
+    background: url('https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bm90ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 .card-body-cont>a{
     width: 100%;

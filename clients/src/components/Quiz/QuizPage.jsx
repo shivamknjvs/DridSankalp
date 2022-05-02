@@ -1,9 +1,41 @@
- import React from 'react'
+ import React,{useEffect, useState} from 'react'
  import './QuizPage.css'
 import QuizCard from '../QuizCard'
- const QuizPage = () => {
+  const QuizPage = () => {
+    const [quizData , setQuizData] = useState([]);
+   const  fetchData= async()=>{
+   try{
+  const res = await fetch("/getquiz",{
+   
+      method:"GET",
+      headers:{
+       
+        "Content-Type":"application/json" 
+     
+      } 
+      
+    
+  })
 
-  const quizdb = [1,2,3,4,5,6,7]
+
+    const data =await res.json();
+   
+     setQuizData(data.quizdata);
+     
+  
+}
+catch(err){
+  console.log(err);
+}
+
+}
+
+  useEffect(() => {
+      
+   fetchData();
+  }, [])
+  
+  
 
    return (
      <div className='quiz-page'>
@@ -14,16 +46,20 @@ import QuizCard from '../QuizCard'
            <button className="btn   filter-button">Science</button>
            <button className="btn   filter-button">Hindi</button>
          </div>
-         <div className="quiz-container row  m-0">
+         <div className="quiz-container row  m-0"> 
+          
            {
-             quizdb.map( (quiz) =>{
+             
+            quizData&&
+             quizData.map( (quiz) =>{
                return (
-                 <QuizCard 
-                 
-                  quizindex={quiz}
+                 <QuizCard  
+
+                 quiz={quiz}
                  /> 
                )
              } )
+             
            }
            
          </div>

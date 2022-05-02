@@ -1,7 +1,9 @@
 
+body{
 
-.quiz-page{
     background-color: rgb(31,27,44);
+}
+.quiz-page{
     color: white;
 }
 .filter-container{

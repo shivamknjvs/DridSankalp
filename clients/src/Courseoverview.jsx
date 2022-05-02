@@ -1,14 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { BsCaretRightFill } from "react-icons/bs";
 import "./Coursesoverview.css";
- 
+
+
 const Coursestruct = () => {
    
- 
+  const loadScript = (src) => {
+    return new Promise((resovle) => {
+        const script = document.createElement("script");
+        script.src = src;
+
+    script.onload = () => {
+        resovle(true);
+    };
+
+    script.onerror = () => {
+        resovle(false);
+    };
+
+    document.body.appendChild(script);
+    });
+    };
+
+    const displayRazorpay = async (amount) => {
+    const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+
+    if (!res) {
+    alert("You are offline... Failed to load Razorpay");
+    return;
+    }
+
+    const options = {
+        key: "rzp_test_zvaY5XF5WIytgP",
+        currency: "INR",
+        amount: amount * 100,
+        name: "Dridsankalp",
+        description: "Thanks for purchasing",
+        image:"https://yt3.ggpht.com/ytc/AKedOLQ8avtDF89PqPdFD9FP_o6L6ERKH_wOpNPksiYmCw=s88-c-k-c0x00ffffff-no-rj",
+
+    handler: function (response) {
+        alert(response.razorpay_payment_id);
+        alert("Payment Successfully");
+    },
+    prefill: {
+        name: "Dridsankalp",
+    },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+    };
+
+    const phonePrice = 499;
+    const laptopPrice = 125000;
+    var formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 0, 
+});
+
 
   return (
-    <>
-      {
+    <div style={{backgroundColor:'white'}} className="course">
+      
         <div className="coursestruct-wrapper">
           <div className="coursestruct-first-row row">
             <div className="coursestruct-first-row-wrapper">
@@ -75,7 +129,10 @@ const Coursestruct = () => {
                 provident, sapiente dolorem corrupti eius!
               </p>
               <div className="pay-now">
-              <button type="button" class="btn btn-danger ">
+              <p style={{fontWeight:"700", fontSize:"1.8rem"}} >{formatter.format(phonePrice)}</p>
+              <button type="button" class="btn btn-danger "
+              onClick={() => displayRazorpay(phonePrice)}
+              >
                 PAY NOW
               </button>
               </div>
@@ -92,9 +149,8 @@ const Coursestruct = () => {
             </div>
           </div>
         </div>
-      }
-      ) )
-    </>
+     
+    </div>
   );
 };
 

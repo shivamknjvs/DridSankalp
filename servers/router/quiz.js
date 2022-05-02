@@ -19,6 +19,20 @@ router.get("/getquiz",async (req,res)=>{
     }
  
 })
+
+router.get("/getOnequiz/:id",async (req,res)=>{
+    
+  try{ 
+      const quizdata =await Quiz.findOne({_id:req.params.id})
+       res.status(201).json({
+           quizdata
+       })
+  }
+  catch(err){
+      res.status(401).send(err)
+  }
+
+})
 router.post("/postquiz", async (req, res) => {
     const {
       id,

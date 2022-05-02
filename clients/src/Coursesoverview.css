@@ -1,25 +1,32 @@
 *{
     font-family: 'Poppins', sans-serif;
+     
 }
 .coursestruct-wrapper {
-  height: 100vh;
+  
   padding:3%  10%;
+  padding-bottom: 0;
 }
 
-.coursestruct-first-row-wrapper >h1{
+.coursestruct-first-row-wrapper >*{
   text-align: center;
+  padding: 1rem 0;
+ 
 }
 
 .coursestruct-second-row{
   margin: 3% 0;
   padding: 2%;
-  border: solid grey 1px;
-  width: 70%;
+   width: 100%;
+  background-color: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;;
 }
-
-.coursestruct-second-row>h3{
-  font-size: 1.5rem;
-  font-weight: 500;
+h1,h2{
+  font-weight: 600;
+}
+.coursestruct-second-row>li{
+  font-size: 1rem;
+  
   padding: 1% 0 1% 1%;
 }
 
@@ -54,10 +61,11 @@ font-size: 1rem;
 }
 
 .coursestruct-third-row{
+  background-color: #ffffff;
   margin: 3% 0;
   padding:2%;
-  border: solid grey 1px;
-  width: 70%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   width: 100%;
 }
 
 .coursestruct-third-row>li{
@@ -65,7 +73,7 @@ font-size: 1rem;
   padding: 0 1% 1% 1%;
   line-height: 2.5rem;
 }
-
+ 
 .last-row-button-wrapper>h3{
   font-size: 2rem;
   font-weight: 500;
@@ -75,6 +83,7 @@ font-size: 1rem;
 .pay-now{
   text-align: center;
 }
+ 
 
 .pay-now>button{
   text-align: center;
@@ -93,15 +102,17 @@ font-size: 1rem;
   background-color: #272522;
   color: white;
   padding: 5rem;
+  margin-bottom: 0;
 }
-
+ 
 .final-message > h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
   text-align: center;
   text-decoration: underline;
   text-decoration-color: #f8423d;
   text-decoration-thickness: 2.5px;
+  color: white;
   text-underline-offset: 5px;
 }
 
@@ -110,4 +121,8 @@ font-size: 1rem;
     font-size: 1.3rem;
     text-align: center;
     margin-top: 4rem;
+  }
+
+  .final-para>p{
+  color: white; 
 }

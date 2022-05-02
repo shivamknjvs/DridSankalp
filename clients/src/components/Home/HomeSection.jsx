@@ -11,7 +11,7 @@ const Home = () => {
     
      <LandingSection/>
      <CoursesSection/>
-     <QuizSection/>
+     {/* <QuizSection/> */}
      <Footer/>
     </div>
   )

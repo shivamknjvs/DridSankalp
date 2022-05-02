@@ -2,6 +2,8 @@ import React from 'react'
 import QuizCard from '../QuizCard'
 import './QuizSection.css'
 function QuizSection() {
+
+  
   return (
     <div className='quiz-section'>
         <h1>Quiz Section</h1>

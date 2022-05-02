@@ -75,7 +75,7 @@ useEffect(()=>{
 
              {
                userlogin === true ?
-              <Link to='/user' ><i class="fas fa-user"></i></Link> 
+              <Link to='/user' ><i style={{color:"white",fontSize:'1.2rem',padding:'0 1rem',paddingBottom:'0.7rem'}} class="fas fa-user nav-link   pe-3 ps-3 active  "></i></Link> 
                :
                <li className="nav-item">
                <Link to='/login' className="nav-link btn pe-3 ps-3 active btn login-li ">Login</Link>

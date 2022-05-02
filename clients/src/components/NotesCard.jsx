@@ -5,7 +5,7 @@ function NotesCard() {
   return (
      
         
-    <div class="card note-card">
+    <div  class="card note-card">
       <div className="img-container"></div>
       <div class="card-body card-body-cont">
         <h5 class="card-title">Card title</h5>

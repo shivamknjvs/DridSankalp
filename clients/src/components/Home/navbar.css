@@ -19,13 +19,13 @@
      font-family: serif;
  }
  .search-cont{
-     border: 1px solid grey;
+      border: 1px solid grey;
       border-radius: 10px;
       background-color:  rgb(51, 50, 72);
    
      
-      height: 2.5rem;
-     
+      height: 2rem;
+      margin-bottom: 0.3rem;
       box-shadow: 0 4px 8px 0 rgba(64, 64, 64, 0.2), 0 6px 20px 0 rgba(53, 53, 53, 0.19);
  }
 .nav-ul{
